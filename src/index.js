@@ -1,3 +1,10 @@
 import React from 'react';
+import {createRoot} from 'react-dom/client';
+import App from './App';
 
-const greeting = <div>Hello React</div>; 
+const rootNode = document.getElementById("root");
+const root = createRoot(rootNode);
+
+root.render(
+    <App />
+);
