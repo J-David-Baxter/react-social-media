@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import Post from './Post';
 
-const PostList = () => {
-  return (
-    <div>PostList</div>
-  )
+const PostList = ({ posts }) => {
+  return posts.map((post, i) => <Post key={i} {...post}/>)
 }
 
 export default PostList
