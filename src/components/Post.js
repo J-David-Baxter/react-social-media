@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../App'
 
 const Post = ({ image, content, user }) => {
+  const currentUser = useContext(UserContext);
+  
   return ( 
     <>
       {image && (
@@ -11,7 +14,7 @@ const Post = ({ image, content, user }) => {
         />
       )}
       <p>{content}</p>
-      <div>{user}</div>
+      <div style={{ color: currentUser === user && 'green' }}>{user}</div>
     </>
   )
 }
