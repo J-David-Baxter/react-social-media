@@ -13,6 +13,7 @@ const CreatePost = ({ user }) => {
     dispatch({ type: "ADD_POST", payload: { post } });
     setContent('');
     imageInputRef.current.value = '';
+    setImage(null);
   }
 
   return (
